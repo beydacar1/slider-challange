@@ -1,0 +1,116 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.body {
+  width: 900px;
+  height: 600px;
+  background: #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .body .slider {
+    background-color: #fff;
+    width: 820px;
+    height: 450px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center; }
+    .body .slider .curve {
+      z-index: 1;
+      position: relative;
+      margin-top: 365px; }
+      .body .slider .curve img {
+        width: 335px;
+        height: 85px; }
+    .body .slider .quotes {
+      z-index: 1;
+      position: relative;
+      margin: 110px 0 0 -180px; }
+      .body .slider .quotes img {
+        width: 70px;
+        height: 50px; }
+    .body .slider .background {
+      z-index: 1;
+      position: relative;
+      margin: 50px 0 0 165px; }
+      .body .slider .background img {
+        width: 395px;
+        height: 370px; }
+    .body .slider .sliderContent {
+      position: absolute;
+      z-index: 2;
+      width: 630px;
+      height: 305px;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .body .slider .sliderContent .sliderItems {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        .body .slider .sliderContent .sliderItems img {
+          width: 300px;
+          height: 300px;
+          float: right; }
+        .body .slider .sliderContent .sliderItems .text p {
+          font-size: 23px;
+          font-weight: 100;
+          padding: .2em;
+          line-height: 32px; }
+        .body .slider .sliderContent .sliderItems .text b {
+          font-weight: 600;
+          font-size: 17px; }
+        .body .slider .sliderContent .sliderItems .text span {
+          font-size: 17px;
+          font-weight: 400;
+          color: #8b8b8b; }
