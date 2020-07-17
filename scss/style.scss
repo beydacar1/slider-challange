@@ -107,25 +107,57 @@ body{
                 flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                img{
-                    width: 300px;
-                    height: 300px;
-                    float: right;
+                position: relative;
+                .imgContent{
+                    position: relative;
+                    display: inline-block;
+                    width: auto;
+                    img{
+                        width: 300px;
+                        height: 300px;
+                        float: right;
+                        box-shadow:0 1px 7px 0 #958A7E;
+                        z-index: 3;
+                    }
+                    .button{
+                        width: 80px;
+                        height: 30px;
+                        background-color: #fff;
+                        border-radius: 20px;
+                        box-shadow:0 1px 7px 0 #958A7E;
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        z-index: 4;
+                        position: absolute;
+                        margin: 285px 0 0 30px;
+                        padding: 5px;
+                        button{
+                            border: none;
+                            outline: none;
+                            background: none;
+                            width: auto;
+                            height: auto;
+                            
+                        }
+                    }
                 }
                 .text{
+                    font-family: 'Montserrat', sans-serif;
                     
                     p{
                         font-size: 23px;
-                        font-weight: 100;
+                        font-weight: 300;
                         padding: .2em;
                         line-height: 32px;
+                        margin-bottom: 15px;
                     }
                     b{
                         font-weight: 600;
-                        font-size: 17px;
+                        font-size: 16px;
                     }
                     span{
-                        font-size: 17px;
+                        font-size: 16px;
                         font-weight: 400;
                         color: rgb(139, 139, 139);
                     }
