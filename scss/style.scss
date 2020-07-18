@@ -51,120 +51,123 @@ body{
     justify-content: center;
     align-items: center;
 }
-.body{
-    width: 900px;
-    height: 600px;
-    display:flex;
-    justify-content: center;
-    align-items: center;
     .slider{
         background-color: #fff;
-        width: 820px;
-        height: 450px;
-        display: inline-flex;
-        .curve {
-            z-index: 1;
-            position: relative;
-            margin-top: 365px;
-            img{
-                width: 335px;
-                height: 85px;
-            }
-        }
-        .quotes{
-            z-index: 1;
-            position: relative;
-            margin:50px 0 0 -180px ;
-            img{
-                width: 70px;
-                height: 50px;
-            }
-        }
-        .background{
-            z-index: 1;
-            position: relative;
-            margin: 50px 0 0 165px;
-            img{
-                width: 395px;
-                height: 370px;
-            }
-        }
+        width: 1000px;
+        height: 600px;
+        display: flex;
+        position:relative;
+        overflow: hidden;
         .sliderContent{
-            position: absolute;
-            z-index: 2;
-            width: 630px;
-            height: 305px;
-            margin-left: 85px;
             display: flex;
-            margin-top: 65px;
+            flex-direction: row;
+            position: absolute;
+            width: 200%;
+            height: 100%;
+            animation: slider 4s infinite;
             .sliderItems{
-                width: 100%;
+                width: 50%;
                 height: 100%;
-                display: flex;
-                flex-direction: row;
-                justify-content: center;
-                align-items: center;
+                display: inline-flex;
                 position: relative;
-                .imgContent{
-                    right: 0;
+                .background{
+                    display: inline;
                     position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    overflow: hidden;
+                    .curve{
+                        position: absolute;
+                        bottom: 0;
+                    }
+                    .quotes{
+                        position: absolute;
+                        top:100px;
+                        left:250px;
+                    }
+                    .bground{
+                        position: absolute;
+                        left: 400px;
+                    }
+                }
+                .inclusive{
+                 display: flex;
+                 flex-direction: row;
+                 position: relative;
+                 align-items: center;
+                 width: 90%;
+                 height: 100%;
+                 z-index: 2;
+                 left: 5%;
+
+                 .text{
+                    display: flex;
+                    flex-direction: column;
+                    position: absolute;
+                    z-index: 2;
+                    left: 0; 
+                    width: 60%;
+                    line-height: 40px;
+                    font-family: "montserrat" , sans-serif;
+                    p{
+                        font-weight: 300;
+                        font-size: 23px;
+                    }
+                    .textAnd{
+                        display: flex;
+                        font-size: 17px;
+                        b{
+                            font-weight: 600;
+                        }
+                        span{
+                            margin-left: 20px;
+                            font-weight: 300;
+                            color:gray;
+                        }
+                    }
+                 }
+                 .imgContent{
+                    position: absolute;
+                    z-index: 1;
+                    right: 0;
                     img{
-                        width: 300px;
-                        height: 300px;
-                        float: right;
-                        box-shadow:0 1px 7px 0 #958A7E;
-                        z-index: 3;
+                        width: 400px;
+                        height: 400px;
                     }
                     .button{
-                        width: 80px;
-                        height: 30px;
+                        position: relative;
+                        margin: -25px 0 0 30px;
+                        width: 100px;
+                        height: 50px;
                         background-color: #fff;
-                        border-radius: 20px;
-                        box-shadow:0 1px 7px 0 #958A7E;
                         display: flex;
                         justify-content: space-around;
                         align-items: center;
-                        z-index: 4;
-                        position: absolute;
-                        margin: 285px 0 0 30px;
-                        padding: 5px;
+                        border-radius: 20px;
+                        -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0 , .3);  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+                        -moz-box-shadow:    3px 3px 3px 1px rgba(0, 0, 0 , .3);  /* Firefox 3.5 - 3.6 */
+                        box-shadow:         3px 3px 3px 1px rgba(0, 0, 0 , .3);  /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */
                         button{
                             border: none;
                             outline: none;
-                            background: none;
-                            width: auto;
-                            height: auto;
-                            
+                            background-color: #fff;
+                            cursor: pointer;
                         }
+                        
                     }
+                 }
                 }
-                .text{
-                    font-family: 'Montserrat', sans-serif;
-                    position: absolute;
-                    width: 380px;
-                    z-index: 1;
-                    left: 0;
-                    p{
-                        font-size: 23px;
-                        font-weight: 300;
-                        padding: .2em;
-                        line-height: 32px;
-                        margin-bottom: 15px;
-                    }
-                    b{
-                        font-weight: 600;
-                        font-size: 16px;
-                    }
-                    span{
-                        font-size: 16px;
-                        font-weight: 400;
-                        color: rgb(139, 139, 139);
-                    }
-                }
-                
-
             }
         }
+        
     }
-}
 
+    @keyframes slider {
+        0% {
+          transform: translateX(0px);
+        }
+        100% {
+          transform: translateX(-1000px);
+        }
+    }

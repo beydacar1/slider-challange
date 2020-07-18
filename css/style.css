@@ -48,98 +48,103 @@ body {
   justify-content: center;
   align-items: center; }
 
-.body {
-  width: 900px;
+.slider {
+  background-color: #fff;
+  width: 1000px;
   height: 600px;
   display: flex;
-  justify-content: center;
-  align-items: center; }
-  .body .slider {
-    background-color: #fff;
-    width: 820px;
-    height: 450px;
-    display: inline-flex; }
-    .body .slider .curve {
-      z-index: 1;
-      position: relative;
-      margin-top: 365px; }
-      .body .slider .curve img {
-        width: 335px;
-        height: 85px; }
-    .body .slider .quotes {
-      z-index: 1;
-      position: relative;
-      margin: 50px 0 0 -180px; }
-      .body .slider .quotes img {
-        width: 70px;
-        height: 50px; }
-    .body .slider .background {
-      z-index: 1;
-      position: relative;
-      margin: 50px 0 0 165px; }
-      .body .slider .background img {
-        width: 395px;
-        height: 370px; }
-    .body .slider .sliderContent {
-      position: absolute;
-      z-index: 2;
-      width: 630px;
-      height: 305px;
-      margin-left: 85px;
-      display: flex;
-      margin-top: 65px; }
-      .body .slider .sliderContent .sliderItems {
+  position: relative;
+  overflow: hidden; }
+  .slider .sliderContent {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: slider 4s infinite; }
+    .slider .sliderContent .sliderItems {
+      width: 50%;
+      height: 100%;
+      display: inline-flex;
+      position: relative; }
+      .slider .sliderContent .sliderItems .background {
+        display: inline;
+        position: absolute;
         width: 100%;
         height: 100%;
+        z-index: 1;
+        overflow: hidden; }
+        .slider .sliderContent .sliderItems .background .curve {
+          position: absolute;
+          bottom: 0; }
+        .slider .sliderContent .sliderItems .background .quotes {
+          position: absolute;
+          top: 100px;
+          left: 250px; }
+        .slider .sliderContent .sliderItems .background .bground {
+          position: absolute;
+          left: 400px; }
+      .slider .sliderContent .sliderItems .inclusive {
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        position: relative;
         align-items: center;
-        position: relative; }
-        .body .slider .sliderContent .sliderItems .imgContent {
-          right: 0;
-          position: absolute; }
-          .body .slider .sliderContent .sliderItems .imgContent img {
-            width: 300px;
-            height: 300px;
-            float: right;
-            box-shadow: 0 1px 7px 0 #958A7E;
-            z-index: 3; }
-          .body .slider .sliderContent .sliderItems .imgContent .button {
-            width: 80px;
-            height: 30px;
+        width: 90%;
+        height: 100%;
+        z-index: 2;
+        left: 5%; }
+        .slider .sliderContent .sliderItems .inclusive .text {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          z-index: 2;
+          left: 0;
+          width: 60%;
+          line-height: 40px;
+          font-family: "montserrat" , sans-serif; }
+          .slider .sliderContent .sliderItems .inclusive .text p {
+            font-weight: 300;
+            font-size: 23px; }
+          .slider .sliderContent .sliderItems .inclusive .text .textAnd {
+            display: flex;
+            font-size: 17px; }
+            .slider .sliderContent .sliderItems .inclusive .text .textAnd b {
+              font-weight: 600; }
+            .slider .sliderContent .sliderItems .inclusive .text .textAnd span {
+              margin-left: 20px;
+              font-weight: 300;
+              color: gray; }
+        .slider .sliderContent .sliderItems .inclusive .imgContent {
+          position: absolute;
+          z-index: 1;
+          right: 0; }
+          .slider .sliderContent .sliderItems .inclusive .imgContent img {
+            width: 400px;
+            height: 400px; }
+          .slider .sliderContent .sliderItems .inclusive .imgContent .button {
+            position: relative;
+            margin: -25px 0 0 30px;
+            width: 100px;
+            height: 50px;
             background-color: #fff;
-            border-radius: 20px;
-            box-shadow: 0 1px 7px 0 #958A7E;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            z-index: 4;
-            position: absolute;
-            margin: 285px 0 0 30px;
-            padding: 5px; }
-            .body .slider .sliderContent .sliderItems .imgContent .button button {
+            border-radius: 20px;
+            -webkit-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+            /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+            -moz-box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+            /* Firefox 3.5 - 3.6 */
+            box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3);
+            /* Opera 10.5, IE 9, Firefox 4+, Chrome 6+, iOS 5 */ }
+            .slider .sliderContent .sliderItems .inclusive .imgContent .button button {
               border: none;
               outline: none;
-              background: none;
-              width: auto;
-              height: auto; }
-        .body .slider .sliderContent .sliderItems .text {
-          font-family: 'Montserrat', sans-serif;
-          position: absolute;
-          width: 380px;
-          z-index: 1;
-          left: 0; }
-          .body .slider .sliderContent .sliderItems .text p {
-            font-size: 23px;
-            font-weight: 300;
-            padding: .2em;
-            line-height: 32px;
-            margin-bottom: 15px; }
-          .body .slider .sliderContent .sliderItems .text b {
-            font-weight: 600;
-            font-size: 16px; }
-          .body .slider .sliderContent .sliderItems .text span {
-            font-size: 16px;
-            font-weight: 400;
-            color: #8b8b8b; }
+              background-color: #fff;
+              cursor: pointer; }
+
+@keyframes slider {
+  0% {
+    transform: translateX(0px); }
+  100% {
+    transform: translateX(-1000px); } }
