@@ -51,7 +51,6 @@ body {
 .body {
   width: 900px;
   height: 600px;
-  background: #ccc;
   display: flex;
   justify-content: center;
   align-items: center; }
@@ -59,9 +58,7 @@ body {
     background-color: #fff;
     width: 820px;
     height: 450px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center; }
+    display: inline-flex; }
     .body .slider .curve {
       z-index: 1;
       position: relative;
@@ -72,7 +69,7 @@ body {
     .body .slider .quotes {
       z-index: 1;
       position: relative;
-      margin: 110px 0 0 -180px; }
+      margin: 50px 0 0 -180px; }
       .body .slider .quotes img {
         width: 70px;
         height: 50px; }
@@ -88,9 +85,9 @@ body {
       z-index: 2;
       width: 630px;
       height: 305px;
+      margin-left: 85px;
       display: flex;
-      justify-content: center;
-      align-items: center; }
+      margin-top: 65px; }
       .body .slider .sliderContent .sliderItems {
         width: 100%;
         height: 100%;
@@ -100,9 +97,8 @@ body {
         align-items: center;
         position: relative; }
         .body .slider .sliderContent .sliderItems .imgContent {
-          position: relative;
-          display: inline-block;
-          width: auto; }
+          right: 0;
+          position: absolute; }
           .body .slider .sliderContent .sliderItems .imgContent img {
             width: 300px;
             height: 300px;
@@ -129,7 +125,11 @@ body {
               width: auto;
               height: auto; }
         .body .slider .sliderContent .sliderItems .text {
-          font-family: 'Montserrat', sans-serif; }
+          font-family: 'Montserrat', sans-serif;
+          position: absolute;
+          width: 380px;
+          z-index: 1;
+          left: 0; }
           .body .slider .sliderContent .sliderItems .text p {
             font-size: 23px;
             font-weight: 300;
